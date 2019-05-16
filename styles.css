@@ -4,10 +4,13 @@
 
 html,
 body {
-  background-image: url(programming.jpg);
-  background-size: cover;
   height: 100%;
   margin: 0;
+}
+
+body {
+  background-image: url(programming.jpg);
+  background-size: cover;
   font-family: Montserrat, sans-serif;
 }
 
