@@ -24,8 +24,8 @@
 .container {
   width: 75%;
   height: 100%;
-  padding-top: 60px;
-  padding-left: 50px;
+  padding: 60px 50px;
+  overflow-y: auto;
 }
 
 html,
@@ -54,12 +54,12 @@ h1, h2 {
 }
 
 a:visited {
-  color: orange;
+  color: blueviolet;
   text-decoration: none;
 }
 
 aside {
-  background-color: rgba(30, 30, 30, .75);
+  background-color: rgba(10, 10, 10, .9);
   color: white;
   width: 25%;
   height: 100%;
@@ -110,12 +110,12 @@ nav ul li a:visited {
 }
 
 nav ul li a:hover {
-  color: orange;
+  color: blueviolet;
   text-decoration: underline;
 }
 
 nav ul li a:focus {
-  color: red;
+  color: blueviolet;
 }
 
 /* nav ul li:first-child a {
@@ -158,5 +158,23 @@ nav ul li i {
 
 .profile-details {
   width: 800px;
-  background-color: green;
+  padding: 30px;
+  overflow: hidden;
+  background-color: rgba(10, 10, 10, .9);;
+  color: #fff;
+}
+
+.profile-details h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.profile-details p {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+.about,
+.bio {
+  width: 48%;
 }
