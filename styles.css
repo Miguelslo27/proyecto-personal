@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.box-shadow {
+  /* box-shadow: [desplazamiento en x] [desplazamiento en y] [difuminado] [tamaño] [color] */
+  box-shadow: 0 0 20px #000;
+}
+
+.highlight,
+.highlight a {
+  font-weight: bold;
+  color: blueviolet;
+}
+
+.container {
+  width: 75%;
+  height: 100%;
+  padding: 60px 50px;
+  overflow-y: auto;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url(programming.jpg);
+  background-size: cover;
+  font-family: Montserrat, sans-serif;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h1, h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a:visited {
+  color: blueviolet;
+  text-decoration: none;
+}
+
+aside {
+  background-color: rgba(10, 10, 10, .9);
+  color: white;
+  width: 25%;
+  height: 100%;
+  text-align: right;
+  padding-top: 60px;
+  padding-right: 30px;
+}
+
+aside header {
+  margin-bottom: 40px;
+}
+
+aside header h1,
+aside header h2 {
+  text-transform: uppercase;
+}
+
+aside header h1 {
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+aside header h2 {
+  letter-spacing: 3px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+nav ul li {
+  margin-bottom: 20px;
+}
+
+nav ul li a:link {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  height: 25px;
+  line-height: 25px;
+}
+
+nav ul li a:visited {
+  color: #fff;
+}
+
+nav ul li a:hover {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+nav ul li a:focus {
+  color: blueviolet;
+}
+
+/* nav ul li:first-child a {
+  color: blue !important;
+}
+
+nav ul li:last-child a {
+  color: red !important;
+}
+
+nav ul li:nth-child(3) a {
+  color: blueviolet !important;
+} */
+
+nav ul li.highlight a:visited {
+  color: blueviolet;
+}
+
+nav ul li a i {
+  position: relative;
+  top: 2px;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.home-picture {
+  width: 800px;
+  height: 500px;
+  background-color: orange;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.home-picture img {
+  width: 100%;
+}
+
+.profile-details {
+  width: 800px;
+  padding: 30px;
+  overflow: hidden;
+  background-color: rgba(10, 10, 10, .9);;
+  color: #fff;
+}
+
+.profile-details h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.profile-details p {
+  font-size: 14px;
+  line-height: 2em;
+}
+
+.about,
+.bio {
+  width: 48%;
+}
