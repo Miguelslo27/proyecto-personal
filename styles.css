@@ -150,6 +150,7 @@ table {
 
 table caption {
   padding: .5em;
+  margin-bottom: 1em;
   text-align: left;
 }
 
@@ -160,7 +161,7 @@ table th {
 table th,
 table td {
   text-align: left;
-  padding: .5em;
+  padding: 1em .5em;
 }
 
 .content-inner {
