@@ -1,0 +1,12 @@
+.profile-details .about {
+  margin-bottom: 30px;
+}
+
+.profile-details .about,
+.profile-details .bio {
+  width: 100%;
+}
+
+.profile-details p {
+  font-size: 16px;
+}

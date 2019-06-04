@@ -10,7 +10,11 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-screens.css" media="screen and (max-width: 1200px)">
+  <link rel="stylesheet" href="styles-tablet.css" media="screen and (max-width: 900px)">
+  <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 720px)">
 </head>
 
 <body>
@@ -20,7 +24,7 @@
       <h2>Programador</h2>
     </header>
     <section>
-      <nav>
+      <nav class="desktop">
         <ul>
           <li>
             <a href="index.html">Perfil <i class="fas fa-address-card"></i></a>
@@ -38,6 +42,29 @@
             <a href="#">Contacto <i class="fas fa-envelope"></i></a>
           </li>
         </ul>
+      </nav>
+      <nav class="mobile">
+        <li>
+          <i class="fas fa-bars"></i>
+
+          <ul>
+            <li>
+              <a href="index.html">Perfil <i class="fas fa-address-card"></i></a>
+            </li>
+            <li>
+              <a href="skills.html">Habilidades <i class="fas fa-chart-bar"></i></a>
+            </li>
+            <li>
+              <a href="#">Trabajos <i class="fas fa-briefcase"></i></a>
+            </li>
+            <li>
+              <a href="#">Tarifas <i class="fas fa-tag"></i></a>
+            </li>
+            <li class="highlight">
+              <a href="#">Contacto <i class="fas fa-envelope"></i></a>
+            </li>
+          </ul>
+        </li>
       </nav>
     </section>
   </aside>
