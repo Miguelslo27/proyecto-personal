@@ -27,17 +27,43 @@ aside nav li i {
 .mobile-menu-button {}
 
 .mobile-menu {
-  position: absolute;
-  width: 250px;
+  position: fixed;
+  top: 124px;
   right: 0;
-  background-color: rgba(10,10,10, .9);
+  bottom: 0;
+  left: 0;
+  background-color: rgb(10,10,10);
+
+  transition: right .5s ease, left .5s ease, opacity .5s ease;
+}
+
+.mobile-menu.hidden {
+  display: inherit;
+  visibility: visible;
   opacity: 0;
+  overflow: hidden;
+  left: 100%;
+  right: -100%;
+}
+
+.mobile-menu.visible {
+  display: inherit;
+  visibility: visible;
+  opacity: 1;
+  left: 0;
+  right: 0;
 }
 
 .mobile-menu li {
   display: block;
   margin: 0;
   padding: 0 20px;
+  text-align: left;
+}
+
+.mobile-menu li span {
+  display: inline-block;
+  width: 100px;
 }
 
 section.container {
