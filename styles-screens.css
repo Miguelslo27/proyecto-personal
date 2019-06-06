@@ -1,0 +1,34 @@
+body {
+  padding-top: 125px;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  overflow: hidden;
+}
+
+aside header {
+  float: left;
+  margin-bottom: 0;
+}
+
+aside nav {
+  float: right;
+}
+
+aside nav ul li {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 20px;
+}
+
+section.container {
+  width: 900px;
+  float: none;
+  height: auto;
+  margin: auto;
+}

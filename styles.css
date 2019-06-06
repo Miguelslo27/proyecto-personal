@@ -2,6 +2,24 @@
   box-sizing: border-box;
 }
 
+.desktop {
+  display: initial;
+}
+
+.mobile {
+  display: none;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+.visible {
+  display: initial;
+  visibility: visible;
+}
+
 .float-left {
   float: left;
 }
@@ -64,6 +82,10 @@ h1, h2 {
 a:visited {
   color: blueviolet;
   text-decoration: none;
+}
+
+img {
+  display: block;
 }
 
 aside {
