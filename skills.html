@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="styles-screens.css" media="screen and (max-width: 1200px)">
   <link rel="stylesheet" href="styles-tablet.css" media="screen and (max-width: 900px)">
   <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 720px)">
+
+  <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -44,27 +46,26 @@
         </ul>
       </nav>
       <nav class="mobile">
-        <li>
-          <i class="fas fa-bars"></i>
-
-          <ul>
-            <li>
-              <a href="index.html">Perfil <i class="fas fa-address-card"></i></a>
-            </li>
-            <li>
-              <a href="skills.html">Habilidades <i class="fas fa-chart-bar"></i></a>
-            </li>
-            <li>
-              <a href="#">Trabajos <i class="fas fa-briefcase"></i></a>
-            </li>
-            <li>
-              <a href="#">Tarifas <i class="fas fa-tag"></i></a>
-            </li>
-            <li class="highlight">
-              <a href="#">Contacto <i class="fas fa-envelope"></i></a>
-            </li>
-          </ul>
-        </li>
+        <li id="mobile-menu-button" class="mobile-menu-button">
+            <i class="fas fa-bars"></i>
+          </li>
+          <ul id="mobile-menu" class="mobile-menu">
+          <li>
+            <a href="index.html">Perfil <i class="fas fa-address-card"></i></a>
+          </li>
+          <li>
+            <a href="skills.html">Habilidades <i class="fas fa-chart-bar"></i></a>
+          </li>
+          <li>
+            <a href="#">Trabajos <i class="fas fa-briefcase"></i></a>
+          </li>
+          <li>
+            <a href="#">Tarifas <i class="fas fa-tag"></i></a>
+          </li>
+          <li class="highlight">
+            <a href="#">Contacto <i class="fas fa-envelope"></i></a>
+          </li>
+        </ul>
       </nav>
     </section>
   </aside>

@@ -24,21 +24,17 @@ aside nav li i {
   font-size: 30px;
 }
 
-aside nav li ul {
+.mobile-menu-button {}
+
+.mobile-menu {
   position: absolute;
   width: 250px;
   right: 0;
   background-color: rgba(10,10,10, .9);
   opacity: 0;
-
-  transition: all 1s ease;
 }
 
-aside nav li:hover ul {
-  opacity: 1;
-}
-
-aside nav li ul li {
+.mobile-menu li {
   display: block;
   margin: 0;
   padding: 0 20px;
