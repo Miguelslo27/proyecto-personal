@@ -1,8 +1,17 @@
 function Calc() {
+  this.new_value = true;
   this.value_1;
   this.value_2;
   this.operation;
   this.result = 0;
+}
+
+Calc.prototype.setNewValue = function (isNew) {
+  this.new_value = isNew;
+}
+
+Calc.prototype.isNewValue = function () {
+  return this.new_value;
 }
 
 Calc.prototype.setVal1 = function (value) {
@@ -25,6 +34,8 @@ Calc.prototype.setValue = function (value) {
     this.setVal2(value);
     this.calcResult();
   }
+
+  this.setNewValue(true);
 }
 
 Calc.prototype.calcResult = function () {
