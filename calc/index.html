@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculadora</title>
+
+  <script src="calc.js"></script>
+
+  <script>
+    var inputValue;
+    var sumOp;
+    var subOp;
+    var divOp;
+    var mulOp;
+    var getResult;
+    var clearButton;
+    var calculadora;
+
+    function resetInput(value) {
+      inputValue.value = value;
+      inputValue.select();
+    }
+    
+    window.addEventListener('load', function () {
+      inputValue = document.getElementById('input_value');
+      sumOp = document.getElementById('sum_op');
+      subOp = document.getElementById('sub_op');
+      divOp = document.getElementById('div_op');
+      mulOp = document.getElementById('mul_op');
+      getResult = document.getElementById('get_result');
+      clearButton = document.getElementById('reset');
+
+      calculadora = new Calc();
+      resetInput(0);
+
+      inputValue.addEventListener('click', function () {
+        console.log("inputValue Clicked");
+        this.select();
+      });
+
+      sumOp.addEventListener('click', function () {
+        console.log("sumOp Clicked");
+        calculadora.setValue(inputValue.value);
+        calculadora.setOperation('SUM');
+        resetInput(calculadora.getResult());
+      });
+
+      subOp.addEventListener('click', function () {
+        console.log("subOp Clicked");
+        calculadora.setValue(inputValue.value);
+        calculadora.setOperation('SUB');
+        resetInput(calculadora.getResult());
+      });
+
+      divOp.addEventListener('click', function () {
+        console.log("divOp Clicked");
+        calculadora.setValue(inputValue.value);
+        calculadora.setOperation('DIV');
+        resetInput(calculadora.getResult());
+      });
+
+      mulOp.addEventListener('click', function () {
+        console.log("mulOp Clicked");
+        calculadora.setValue(inputValue.value);
+        calculadora.setOperation('MUL');
+        resetInput(calculadora.getResult());
+      });
+
+      getResult.addEventListener('click', function () {
+        console.log('getResult Clicked');
+        calculadora.setValue(inputValue.value);
+        calculadora.calcResult();
+        resetInput(calculadora.getResult());
+      });
+
+      clearButton.addEventListener('click', function () {
+        console.log('Reset calcl clicked');
+        calculadora.reset();
+        resetInput(0);
+      });
+    });
+
+  </script>
+</head>
+<body>
+  <h1>Mi calculadora</h1>
+
+  <!-- Formulario -->
+  <form action="javascript:void(0);">
+    <input type="text" id="input_value">
+    <button id="sum_op">+</button>
+    <button id="sub_op">-</button>
+    <button id="div_op">/</button>
+    <button id="mul_op">*</button>
+    <button id="get_result">=</button>
+    <button id="reset">C</button>
+  </form>
+</body>
+</html>
