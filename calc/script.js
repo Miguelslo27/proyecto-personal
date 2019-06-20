@@ -24,10 +24,6 @@ window.addEventListener('load', function () {
   calculadora = new Calc();
   resetInput(0);
 
-  // document.addEventListener('keydown', function (e) {
-  //   console.log(e);
-  // });
-
   inputValue.addEventListener('keyup', function (e) {
     e.preventDefault();
 
