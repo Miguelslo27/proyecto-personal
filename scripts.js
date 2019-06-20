@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
   function toggleMenu() {
     // devuelve true o false si la clase visible existe o no respectivamente
     var isVisible = mobileMenu.classList.contains('visible');
-    
+
     if (isVisible) {
       mobileMenu.classList.remove('visible');
       mobileMenu.classList.add('hidden');
