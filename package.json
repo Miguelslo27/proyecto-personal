@@ -4,7 +4,8 @@
   "description": "Mi curriculum personal online",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/Miguelslo27/proyecto-personal/issues"
   },
-  "homepage": "https://github.com/Miguelslo27/proyecto-personal#readme"
+  "homepage": "https://github.com/Miguelslo27/proyecto-personal#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
