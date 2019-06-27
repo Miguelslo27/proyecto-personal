@@ -1,3 +1,0 @@
-Estas son las instrucciones de instalación
-
-Para iniciar el proyecto abre index.html en tu navegador favorito.
