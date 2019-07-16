@@ -1,74 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mis Habilidades</title>
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="styles-screens.css" media="screen and (max-width: 1200px)">
-  <link rel="stylesheet" href="styles-tablet.css" media="screen and (max-width: 900px)">
-  <link rel="stylesheet" href="styles-mobile.css" media="screen and (max-width: 720px)">
-
-  <script src="scripts.js"></script>
-</head>
+<include src="head-includes">
+    <arg title>Mis habilidades</arg>
+</include>
 
 <body>
-  <aside class="float-left box-shadow">
-    <header>
-      <h1>Miguel<strong>Sosa</strong></h1>
-      <h2>Programador</h2>
-    </header>
-    <section>
-      <nav class="desktop">
-        <ul>
-          <li>
-            <a href="index.html">Perfil <i class="fas fa-address-card"></i></a>
-          </li>
-          <li>
-            <a href="skills.html">Habilidades <i class="fas fa-chart-bar"></i></a>
-          </li>
-          <li>
-            <a href="#">Trabajos <i class="fas fa-briefcase"></i></a>
-          </li>
-          <li>
-            <a href="#">Tarifas <i class="fas fa-tag"></i></a>
-          </li>
-          <li class="highlight">
-            <a href="#">Contacto <i class="fas fa-envelope"></i></a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mobile">
-        <li id="mobile-menu-button" class="mobile-menu-button">
-          <i class="fas fa-bars"></i>
-        </li>
-        <ul id="mobile-menu" class="mobile-menu hidden">
-          <li>
-            <a href="index.html"><span>Perfil</span> <i class="fas fa-address-card"></i></a>
-          </li>
-          <li>
-            <a href="skills.html"><span>Habilidades</span> <i class="fas fa-chart-bar"></i></a>
-          </li>
-          <li>
-            <a href="#"><span>Trabajos</span> <i class="fas fa-briefcase"></i></a>
-          </li>
-          <li>
-            <a href="#"><span>Tarifas</span> <i class="fas fa-tag"></i></a>
-          </li>
-          <li class="highlight">
-            <a href="#"><span>Contacto</span> <i class="fas fa-envelope"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-  </aside>
+  <include src="navigation"></include>
 
   <section class="container float-right">
     <div class="content-inner box-shadow">

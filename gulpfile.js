@@ -2,14 +2,18 @@ const gulp = require('gulp');
 const browserSync = require('browser-sync');
 const GulpFunctions = require('./gulp-functions');
 const sass = require('gulp-sass');
+const image = require('gulp-image');
 const teddy = require('gulp-teddy');
 const teddyConf = {
-  setTemplateRoot: ''
+  setTemplateRoot: 'src/teddy-templates',
+  compileAtEveryRender: true
 };
+teddy.settings(teddyConf);
 
 gulp.task('build-html:dev', function () {
   return gulp
     .src('./src/**/*.html')
+    .pipe(teddy.compile())
     .pipe(gulp.dest('./.temp'));
 });
 
@@ -28,6 +32,7 @@ gulp.task('build-statics:dev', function () {
       './src/**/*.png',
       './src/**/*.gif',
     ])
+    .pipe(image())
     .pipe(gulp.dest('./.temp/statics/images'));
 });
 

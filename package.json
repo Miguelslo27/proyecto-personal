@@ -23,6 +23,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
+    "gulp-image": "^5.1.0",
     "gulp-sass": "^4.0.2",
     "gulp-teddy": "^1.6.1",
     "nodemon": "^1.19.1"
