@@ -1,5 +1,6 @@
 const express = require('express');
 const server = express();
+const PORT = 3500;
 
 server.get('/', function (req, res) {
   res.send('Welcome to my server in Express');
@@ -9,6 +10,6 @@ server.get('/hello', function (req, res) {
   res.send('Hello');
 });
 
-server.listen(3000, function () {
-  console.log("Server listening at 3000");
+server.listen(PORT, function () {
+  console.log("Server listening at " + PORT);
 });
