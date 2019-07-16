@@ -15,6 +15,6 @@ server.get('/skills', function (req, res) {
   return res.sendFile(path.join(__dirname, '/build/', 'skills.html'));
 });
 
-server.listen(3000, function () {
-  console.log("Server listening at 3000");
+server.listen(PORT, function () {
+  console.log("Server listening at " + PORT);
 });
