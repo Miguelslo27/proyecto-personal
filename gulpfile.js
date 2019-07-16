@@ -17,11 +17,25 @@ gulp.task('build-html:dev', function () {
     .pipe(gulp.dest('./.temp'));
 });
 
+gulp.task('build-html:prod', function () {
+  return gulp
+    .src('./src/**/*.html')
+    .pipe(teddy.compile())
+    .pipe(gulp.dest('./build'));
+});
+
 gulp.task('build-sass:dev', function () {
   return gulp
     .src('./src/scss/**/*.scss')
     .pipe(sass())
     .pipe(gulp.dest('./.temp/css'));
+});
+
+gulp.task('build-sass:prod', function () {
+  return gulp
+    .src('./src/scss/**/*.scss')
+    .pipe(sass())
+    .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('build-statics:dev', function () {
@@ -36,7 +50,20 @@ gulp.task('build-statics:dev', function () {
     .pipe(gulp.dest('./.temp/statics/images'));
 });
 
+gulp.task('build-statics:prod', function () {
+  return gulp
+    .src([
+      './src/**/*.jpg',
+      './src/**/*.jpeg',
+      './src/**/*.png',
+      './src/**/*.gif',
+    ])
+    .pipe(image())
+    .pipe(gulp.dest('./build/statics/images'));
+});
+
 gulp.task('build:dev', gulp.parallel(['build-html:dev', 'build-sass:dev', 'build-statics:dev']));
+gulp.task('build:prod', gulp.parallel(['build-html:prod', 'build-sass:prod', 'build-statics:prod']));
 
 gulp.task('watch', gulp.series(['build:dev'], function (done) {
   gulp.watch('./src/**/*.html', gulp.series(['build:dev'])).on('change', browserSync.reload);
