@@ -1,17 +1,20 @@
 const express = require('express');
 const server = express();
+const path = require('path');
 const PORT = process.env.PORT || 3500;
 
-server.get('/', function (req, res) {
-  console.log('Root request');
-  res.status(200).send('Welcome to my server in Express');
+function homeResponse(req, res) {
+  return res.sendFile(path.join(__dirname, '/build/', 'index.html'));
+}
+
+server.get('/', homeResponse);
+
+server.get('/home', homeResponse);
+
+server.get('/skills', function (req, res) {
+  return res.sendFile(path.join(__dirname, '/build/', 'skills.html'));
 });
 
-server.get('/hello', function (req, res) {
-  console.log('Hello route request');
-  res.status(200).send('Hello');
-});
-
-server.listen(PORT, function () {
-  console.log("Server listening at " + PORT);
+server.listen(3000, function () {
+  console.log("Server listening at 3000");
 });
