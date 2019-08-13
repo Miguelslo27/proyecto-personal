@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/Miguelslo27/proyecto-personal#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "gulp-minify-inline": "^1.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",

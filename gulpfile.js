@@ -4,6 +4,7 @@ const GulpFunctions = require('./gulp-functions');
 const sass = require('gulp-sass');
 const image = require('gulp-image');
 const teddy = require('gulp-teddy');
+const minifyInline = require('gulp-minify-inline');
 const teddyConf = {
   setTemplateRoot: 'src/teddy-templates',
   compileAtEveryRender: true
@@ -62,8 +63,25 @@ gulp.task('build-statics:prod', function () {
     .pipe(gulp.dest('./build/statics/images'));
 });
 
-gulp.task('build:dev', gulp.parallel(['build-html:dev', 'build-sass:dev', 'build-statics:dev']));
-gulp.task('build:prod', gulp.parallel(['build-html:prod', 'build-sass:prod', 'build-statics:prod']));
+gulp.task('build-js:dev', function () {
+  return gulp
+    .src([
+      './src/**/*.js'
+    ])
+    .pipe(gulp.dest('./.temp'));
+});
+
+gulp.task('build-js:prod', function () {
+  return gulp
+    .src([
+      './src/**/*.js'
+    ])
+    .pipe(minifyInline())
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('build:dev', gulp.parallel(['build-html:dev', 'build-sass:dev', 'build-statics:dev', 'build-js:dev']));
+gulp.task('build:prod', gulp.parallel(['build-html:prod', 'build-sass:prod', 'build-statics:prod', 'build-js:prod']));
 
 gulp.task('watch', gulp.series(['build:dev'], function (done) {
   gulp.watch('./src/**/*.html', gulp.series(['build:dev'])).on('change', browserSync.reload);
